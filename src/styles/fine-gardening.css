@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&display=swap');
+
+.fga-cover-shell {
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 4rem 1.5rem;
+  color: #f8fafc;
+  background: linear-gradient(120deg, #07130f 0%, #10261e 30%, #17412f 58%, #0b1712 100%);
+}
+
+.fga-cover-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.fga-cover-backdrop::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top left, rgba(16, 185, 129, 0.24), transparent 34%),
+    radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.11), transparent 24%),
+    radial-gradient(circle at 15% 88%, rgba(16, 185, 129, 0.16), transparent 22%);
+}
+
+.fga-cover-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.fga-cover-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(48px);
+  opacity: 0.8;
+}
+
+.fga-cover-orb--left {
+  left: -10%;
+  top: -12%;
+  height: 18rem;
+  width: 18rem;
+  background: rgba(16, 185, 129, 0.2);
+}
+
+.fga-cover-orb--right {
+  right: -8%;
+  bottom: -12%;
+  height: 20rem;
+  width: 20rem;
+  background: rgba(16, 185, 129, 0.15);
+}
+
+.fga-cover-orb--center {
+  left: 18%;
+  top: 28%;
+  height: 14rem;
+  width: 14rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.fga-cover-shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 0%, rgba(255, 255, 255, 0.04) 35%, transparent 60%);
+  animation: fga-shimmer 12s ease-in-out infinite;
+}
+
+.fga-cover-card {
+  position: relative;
+  width: 100%;
+  max-width: 56rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(24px);
+}
+
+.fga-cover-content {
+  margin: 0 auto;
+  display: flex;
+  max-width: 40rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.fga-cover-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: rgba(167, 243, 208, 0.8);
+}
+
+.fga-cover-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1.05;
+  color: #ffffff;
+}
+
+.fga-cover-subtitle {
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(240, 253, 244, 0.9);
+}
+
+.fga-cover-description {
+  max-width: 36rem;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(226, 232, 240, 0.9);
+}
+
+.fga-cover-particles {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.fga-cover-particle {
+  position: absolute;
+  display: block;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.35);
+  animation: fga-float-particle 8s ease-in-out infinite;
+}
+
+.fga-cover-particle--1 {
+  left: 8%;
+  top: 14%;
+  height: 0.5rem;
+  width: 0.5rem;
+}
+
+.fga-cover-particle--2 {
+  left: 24%;
+  top: 28%;
+  height: 0.375rem;
+  width: 0.375rem;
+  animation-delay: 1.2s;
+}
+
+.fga-cover-particle--3 {
+  left: 76%;
+  top: 18%;
+  height: 0.625rem;
+  width: 0.625rem;
+  animation-delay: 2.1s;
+}
+
+.fga-cover-particle--4 {
+  left: 84%;
+  top: 46%;
+  height: 0.375rem;
+  width: 0.375rem;
+  animation-delay: 0.6s;
+}
+
+.fga-cover-particle--5 {
+  left: 34%;
+  top: 78%;
+  height: 0.5rem;
+  width: 0.5rem;
+  animation-delay: 1.8s;
+}
+
+@keyframes fga-shimmer {
+  0%,
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100%);
+    opacity: 0.24;
+  }
+}
+
+@keyframes fga-float-particle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: translate3d(0, -10px, 0);
+  }
+}
