@@ -1,10 +1,10 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 
-interface GlassCardProps extends HTMLAttributes<HTMLDivElement> {
+interface FGAGlassCardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode;
 }
 
-export default function GlassCard({ children, className = '', ...props }: GlassCardProps) {
+export default function FGAGlassCard({ children, className = '', ...props }: FGAGlassCardProps) {
   const baseClasses = [
     'w-full rounded-[1.75rem] border border-white/40 bg-white/15 p-6 shadow-[0_20px_60px_-20px_rgba(15,23,42,0.45)] backdrop-blur-xl backdrop-saturate-150 transition-all duration-300 ease-out',
     'overflow-hidden',
