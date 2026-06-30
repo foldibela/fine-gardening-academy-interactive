@@ -25,13 +25,16 @@ export default function ComponentShowcase() {
 
         <div className="relative w-full max-w-4xl">
           <FGAGlassCard className="text-left">
-            <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+            <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
               <div className="space-y-6">
                 <div className="space-y-3">
-                  <h2 className="text-3xl font-semibold text-white sm:text-4xl">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.38em] text-emerald-300/80">
+                    Fine Gardening Academy
+                  </p>
+                  <h2 className="max-w-2xl text-3xl font-semibold leading-[1.05] text-white sm:text-4xl lg:text-[2.6rem]">
                     💧 Automatic Irrigation System Installer
                   </h2>
-                  <p className="max-w-2xl text-base leading-8 text-slate-200/90 sm:text-lg">
+                  <p className="max-w-xl text-base leading-8 text-slate-200/90 sm:text-lg">
                     Learn the principles, planning, and installation craft behind resilient irrigation systems with the elegance and precision of Fine Gardening.
                   </p>
                 </div>
@@ -41,29 +44,27 @@ export default function ComponentShowcase() {
                 </div>
               </div>
 
-              <div className="rounded-[1.5rem] border border-white/15 bg-white/10 p-6 backdrop-blur-md">
-                <div className="rounded-[1.25rem] border border-emerald-200/20 bg-gradient-to-br from-emerald-500/20 via-emerald-400/10 to-transparent p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.18)]">
-                  <p className="text-sm font-semibold uppercase tracking-[0.3em] text-emerald-200/80">
-                    Featured Course
-                  </p>
-                  <div className="mt-4 space-y-3 text-sm text-slate-100/90">
-                    <div className="rounded-xl border border-white/10 bg-slate-950/20 px-3 py-3">
-                      <div className="flex items-center justify-between">
-                        <span>System design</span>
-                        <span className="text-emerald-200">Expert-led</span>
-                      </div>
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-[linear-gradient(145deg,rgba(255,255,255,0.16),rgba(255,255,255,0.04))] p-8 shadow-[inset_0_1px_0_rgba(255,255,255,0.16)] backdrop-blur-xl">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(16,185,129,0.24),_transparent_40%),linear-gradient(135deg,_rgba(255,255,255,0.08),_transparent_70%)]" />
+                <div className="relative flex h-full flex-col justify-between gap-6">
+                  <div className="space-y-3">
+                    <div className="h-2.5 w-24 rounded-full bg-emerald-300/40" />
+                    <div className="h-2.5 w-32 rounded-full bg-white/25" />
+                    <div className="h-2.5 w-20 rounded-full bg-white/20" />
+                  </div>
+
+                  <div className="space-y-4 rounded-[1.35rem] border border-white/10 bg-slate-950/20 p-4">
+                    <div className="flex items-center justify-between text-sm text-slate-100/90">
+                      <span>System design</span>
+                      <span className="text-emerald-200">Professional</span>
                     </div>
-                    <div className="rounded-xl border border-white/10 bg-slate-950/20 px-3 py-3">
-                      <div className="flex items-center justify-between">
-                        <span>Water efficiency</span>
-                        <span className="text-emerald-200">Practical</span>
-                      </div>
+                    <div className="flex items-center justify-between text-sm text-slate-100/90">
+                      <span>Water efficiency</span>
+                      <span className="text-emerald-200">Measured</span>
                     </div>
-                    <div className="rounded-xl border border-white/10 bg-slate-950/20 px-3 py-3">
-                      <div className="flex items-center justify-between">
-                        <span>Professional install</span>
-                        <span className="text-emerald-200">Certified</span>
-                      </div>
+                    <div className="flex items-center justify-between text-sm text-slate-100/90">
+                      <span>Installation craft</span>
+                      <span className="text-emerald-200">Refined</span>
                     </div>
                   </div>
                 </div>
