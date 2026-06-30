@@ -1,4 +1,5 @@
 import FGAGlassCard from './components/FGAGlassCard';
+import FGAButton from './components/FGAButton';
 
 export default function ComponentShowcase() {
   return (
@@ -25,6 +26,12 @@ export default function ComponentShowcase() {
               <p className="text-base leading-7 text-slate-200/90 sm:text-lg">
                 This is our first reusable React component.
               </p>
+
+              <div className="flex flex-wrap gap-3 pt-2">
+                <FGAButton variant="primary">Primary</FGAButton>
+                <FGAButton variant="secondary">Secondary</FGAButton>
+                <FGAButton variant="outline">Outline</FGAButton>
+              </div>
             </div>
           </FGAGlassCard>
         </div>
